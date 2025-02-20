@@ -1,0 +1,127 @@
+
+.container {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background: linear-gradient(135deg, #0f0f0f 0%, #370b54 100%);
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.header h1 {
+    color: #ff6ff0;
+    font-size: 1.8em;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.intro-section {
+    margin: 50px 0;
+}
+
+.intro-title {
+    font-size: 2.5em;
+    color: #ff6ff0;
+    margin-bottom: 10px;
+}
+
+.intro-subtitle {
+    font-size: 1.5em;
+    color: #ffc6ff;
+}
+
+.intro-description {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+
+.fintech-section {
+    margin: 50px 0;
+}
+
+.fintech-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #f3efff;
+}
+
+.fintech-section p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    color: #c7bff0;
+}
+
+.download-btn {
+    background-color: #ff6ff0;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #ff85d0;
+}
+
+
+.visual-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.visual-circle {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 111, 240, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 50%;
+    animation: pulse 4s infinite ease-in-out;
+}
+
+.visual-sphere {
+    width: 150px;
+    height: 150px;
+    background-color: #7e00ff;
+    border-radius: 50%;
+    margin-left: -150px;
+    animation: rotate 6s infinite linear;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

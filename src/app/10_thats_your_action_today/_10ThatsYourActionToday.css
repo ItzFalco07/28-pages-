@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .scrollable-ui {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .time-weather {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .time {
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .weather {
+    font-size: 1em;
+    color: #888;
+  }
+  
+  .scrollable-content {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  
+  .trip-card, .company-related, .daily-actions {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .trip-card h2, .company-related h3, .daily-actions h3 {
+    margin: 0 0 10px;
+  }
+  
+  .trip-card p, .company-related p, .daily-actions p {
+    margin: 0;
+  }
+  
+  .trip-card button {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .loading, .active-info {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .footer {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .footer input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+  }
+  

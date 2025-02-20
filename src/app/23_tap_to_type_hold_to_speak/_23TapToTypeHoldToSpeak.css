@@ -1,0 +1,81 @@
+
+.ride-request-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: Arial, sans-serif;
+  }
+
+  .ride-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+
+  .ride-input-section input {
+    padding: 10px;
+    width: 80%;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+
+  .ride-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .ride-options button {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    width: 80%;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  
+  .ride-options button:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .ride-confirmation {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .confirm-button {
+    padding: 10px 30px;
+    background: linear-gradient(135deg, #ff8a00, #da1b60);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .ride-request-container {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

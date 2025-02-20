@@ -1,0 +1,256 @@
+/* Container with glassy look and gradient */
+.ai-container {
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    border-radius: 20px;
+    backdrop-filter: blur(10px); /* Background blur for glassy effect */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); /* Shadow for elevation */
+    max-width: 375px;
+    margin: 50px auto;
+    position: relative;
+    height: 650px; /* Increased height for more space */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  }
+  
+  /* Gradient overlay for color */
+  .ai-container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, rgba(255, 105, 180, 0.3), rgba(255, 165, 0, 0.3));
+    border-radius: 20px;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  /* Ensure content appears above gradient */
+  .header, .prompt, .response, .stats {
+    z-index: 2;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+  
+  /* Response with fade-in effect */
+  .response {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: #d896ff; /* Purple text for better visibility */
+    min-height: 50px; /* Ensure some space even without a response */
+  }
+  
+  .thinking-bubble {
+    width: 120px;
+    height: 50px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    animation: bubbleExpand 1s infinite ease-in-out;
+    backdrop-filter: blur(5px); /* Glassy bubble */
+  }
+
+  .icon{
+    transform: scale(-1, 1);
+    margin-right: 5px;
+  }
+  .hint-info {
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 10px;
+  }
+  .default-question {
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 25px;
+  }
+  
+  /* Enhanced Input Field and Button */
+  .prompt {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto; /* Ensure prompt stays at the bottom */
+  }
+  
+  .prompt input {
+    padding: 15px;
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    width: 80%;
+    font-size: 1.2em;
+    background: linear-gradient(145deg, rgba(255, 165, 0, 0.4), rgba(255, 105, 180, 0.2)); /* Orange to pink gradient */
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px); /* Blur inside input */
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease, border 0.3s ease;
+  }
+  
+  .prompt input:focus {
+    background: linear-gradient(145deg, rgba(255, 165, 0, 0.6), rgba(255, 105, 180, 0.4)); /* Slightly brighter on focus */
+    outline: none;
+    border: 2px solid rgba(255, 165, 0, 0.7);
+  }
+  
+  .prompt button {
+    padding: 12px 30px;
+    border-radius: 30px;
+    background: linear-gradient(145deg, rgba(255, 165, 0, 0.4), rgba(255, 105, 180, 0.2)); /* Same gradient for button */
+    color: white;
+    border: 2px solid rgba(255, 165, 0, 0.4); /* Slight orange border */
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .prompt button:hover {
+    background: linear-gradient(145deg, rgba(255, 165, 0, 0.6), rgba(255, 105, 180, 0.4)); /* Brighter hover effect */
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  /* Stats container with improved borders */
+  .stats {
+    width: 85%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle glassy border */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+    backdrop-filter: blur(8px);
+  }
+  
+  .fade-in {
+    animation: fadeIn 1.5s ease-in forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Controls header */
+  .controls-header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .control-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    color: white;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .control-btn.active {
+    background-color: #007bff; /* Blue active state */
+    border: 2px solid #0056b3;
+  }
+  
+  .control-btn:hover {
+    background-color: #0056b3; /* Hover effect */
+  }
+  
+  /* Stats details */
+  .stats-details {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .percentage {
+    font-size: 2.5em;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .delta-label {
+    color: #888;
+    font-size: 1.2em;
+    margin-top: 5px;
+  }
+  
+  /* Simulated graph */
+  .graph {
+    margin-top: 20px;
+  }
+  
+  .bar-graph {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(90deg, #ff9f00 0%, #007bff 100%);
+    border-radius: 10px;
+  }
+  
+  /* Maturity levels */
+  .maturity-levels {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .maturity-item {
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  }
+  
+  .maturity-item.current {
+    background-color: #ff9f00;
+  }
+  
+  .arrow {
+    font-size: 1.5em;
+    margin-left: 10px;
+    color: white;
+  }
+  
